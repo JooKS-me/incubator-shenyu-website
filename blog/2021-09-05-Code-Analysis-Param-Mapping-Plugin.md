@@ -1,34 +1,18 @@
 ---
+slug: code-analysis-param-mapping
 title: Param-Mapping插件源码分析
 author: Kunshuai Zhu
 author_title: Apache ShenYu Contributor
 author_url: https://github.com/JooKS-me
 author_image_url: https://avatars1.githubusercontent.com/u/62384022?v=4
-tags: [Context-Path, Apache ShenYu]
+tags: [Param-Mapping, Apache ShenYu]
 ---
 
-## 跑Demo
+> 开始前，可以运行[Param-Mapping插件的Demo](demo-collection#param-mapping插件)
 
-1. 开启admin
-2. 开启bootstrap
-3. 开启shenyu-examples-http
+### 正文
 
-到这里，我们的服务就都开起来了，接下来打开admin网页，进行相关配置。
-
-1. 开启 `param-mapping` 插件
-2. 添加 `param-mapping` 插件的选择器和规则，这里我们只添加 `/request/parameter` 的相关配置，如下图。
-   ![param-mapping-selector](/img/activities/code-analysis-param-mapping-plugin/param-mapping-selector.png)
-   ![param-mapping-rules](/img/activities/code-analysis-param-mapping-plugin/param-mapping-rules.png)
-
-最后，向 `/http/request/parameter` 发起请求。
-
-![param-mapping-request](/img/activities/code-analysis-param-mapping-plugin/param-mapping-request.png)
-
-上面Rules的配置会将请求体中的 `id` 替换成 `userId` ，`name` 替换成 `userName`
-
-## 源码分析
-
-开始前，先看一下这个插件的结构，如下图。
+先看一下这个插件的结构，如下图。
 
 ![param-mapping-structure](/img/activities/code-analysis-param-mapping-plugin/param-mapping-structure.png)
 
@@ -214,9 +198,8 @@ public Mono<Void> apply(final ServerWebExchange exchange, final ShenyuPluginChai
 
 `JsonOperator` 的处理流程与 `FormDataOperator` 大致类似。
 
-## 总结
+### 总结
 
 最后，用一张图来简单总结一下。
 
 ![param-mapping-summary](/img/activities/code-analysis-param-mapping-plugin/param-mapping-summary.jpeg)
-
