@@ -4,7 +4,7 @@ title: Apache ShenYu Demo集合
 tags: [Apache ShenYu]
 ---
 
-## Context-Path插件
+### Context-Path插件
 
 1. 启动 shenyu-admin
 2. 启动 shenyu-bootstrap
@@ -37,7 +37,7 @@ tags: [Apache ShenYu]
 
 ![context-path-success](/img/activities/code-analysis-context-path-plugin/context-path-success.png)
 
-## Param-Mapping插件
+### Param-Mapping插件
 
 1. 启动 shenyu-admin
 2. 启动 bootstrap

@@ -45,7 +45,7 @@ public Mono<Void> doExecute(final ServerWebExchange exchange, final ShenyuPlugin
   }
   ```
 
-  从match方法的代码可以看出，目前有 `DefaultOperator`、`FormDataOperator`、`JsonOperator`三种，支持 `x-www-form-urlencoded` 和 `application/json` 两种格式的请求体。
+  从match方法的代码可以看出，目前有 `DefaultOperator`、`FormDataOperator`、`JsonOperator`三种，支持 `x-www-form-urlencoded` 和 `json` 两种格式的请求体。
 
 那么我们就来看一下上面三种Operator究竟是怎么样的吧。
 
@@ -202,4 +202,4 @@ public Mono<Void> apply(final ServerWebExchange exchange, final ShenyuPluginChai
 
 最后，用一张图来简单总结一下。
 
-![param-mapping-summary](/img/activities/code-analysis-param-mapping-plugin/param-mapping-summary.jpeg)
+![param-mapping-summary](/img/activities/code-analysis-param-mapping-plugin/param-mapping-summary.jpg)
